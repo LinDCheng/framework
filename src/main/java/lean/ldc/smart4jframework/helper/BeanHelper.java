@@ -12,7 +12,7 @@ import java.util.Set;
  * 然后需要循环调用ReflectionUtil类的newInstance方法，来实例化对象。
  * 最后将每次创建的对象存放在一个静态的Map<Class<?>,Object> 中。
  * 我们需要随时通过该Map的key(类名)去获取所对应的value(Bean对象)
- * Created by Administrator on 2017/10/26.
+ * Created by LinDunCheng on 2017/10/26.
  */
 public final class BeanHelper {
 
@@ -48,6 +48,15 @@ public final class BeanHelper {
             throw new RuntimeException("can not get bean by class:" + cls);
         }
         return (T) BEAN_MAP.get(cls);
+    }
+
+    /**
+     * 设置 Bean 实例
+     * @param cls
+     * @param object
+     */
+    public static void setBean(Class<?> cls, Object object) {
+        BEAN_MAP.put(cls, object);
     }
 }
 

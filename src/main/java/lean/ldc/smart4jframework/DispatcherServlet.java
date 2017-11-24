@@ -9,7 +9,6 @@ import lean.ldc.smart4jframework.helper.ConfigHelper;
 import lean.ldc.smart4jframework.helper.ControllerHelper;
 import lean.ldc.smart4jframework.util.*;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.lf5.util.StreamUtils;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
@@ -22,7 +21,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
-import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;

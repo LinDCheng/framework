@@ -1,9 +1,6 @@
 package lean.ldc.smart4jframework;
 
-import lean.ldc.smart4jframework.helper.BeanHelper;
-import lean.ldc.smart4jframework.helper.ClassHelper;
-import lean.ldc.smart4jframework.helper.ControllerHelper;
-import lean.ldc.smart4jframework.helper.IocHelper;
+import lean.ldc.smart4jframework.helper.*;
 import lean.ldc.smart4jframework.util.ClassUtil;
 
 /**
@@ -16,12 +13,13 @@ public final class HelperLoader {
         Class<?>[] classes = {
                 ClassHelper.class,
                 BeanHelper.class,
+                AopHelper.class,
                 IocHelper.class,
                 ControllerHelper.class
         };
 
         for (Class<?> cls : classes ) {
-            ClassUtil.loadClass(cls.getName(),false);
+            ClassUtil.loadClass(cls.getName(),true);
         }
     }
 

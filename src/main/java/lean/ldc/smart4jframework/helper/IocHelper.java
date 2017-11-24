@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 import java.util.Map;
 
 /**
- * 依赖注入助手类(IoC框架中所管理的对象都是单利的，由于IoC框架底层是从BeanHelper中获取Bean Map，而Bean Map中的对象都是事先创建好放入这个Bean容器的，所有的对象都是单利的)
+ * 依赖注入助手类(IoC框架中所管理的对象都是单利的，由于IoC框架底层是从BeanHelper中获取Bean Map，而Bean Map中的对象都是事先创建好放入这个Bean容器的，所有的对象都是单例的)
  * 开发者不是自己通过new的方式来实例化,而是通过框架自身来实例化,这个过程叫做IoC--控制反转。控制不是由开发者决定，而是反转给框架
  * 一般，将控制反转也成为DI(依赖注入),可以理解为将某个类需要依赖的成员注入到这个类中。
  * 实现：
